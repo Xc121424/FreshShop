@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.school.ssm.mapper.FlowerMapper">
+    <select id="findFlowerDetailByFidState" parameterType="java.lang.Integer" resultMap="favoriteDetailAndImageMap">
+        SELECT * FROM flower_detail WHERE Fid=#{Fid} and state='1' and number>=0;
+    </select>
+    <select id="findFlowerDetailByFid" parameterType="java.lang.Integer" resultMap="favoriteDetailAndImageMap">
+        SELECT * FROM flower_detail WHERE Fid=#{Fid} ;
+    </select>
+    <resultMap id="favoriteDetailAndImageMap" type="flowerDetail">
+        <id property="fid" column="fid"/>
+        <result property="fprice" column="Fprice"/>
+        <result property="number" column="Number"/>
+        <result property="tid" column="Tid"></result>
+        <result property="favoriteNumber" column="FavoriteNumber"></result>
+        <result property="remark" column="Remark"/>
+        <result property="materials" column="materials"/>
+        <result property="packaging" column="packaging"/>
+        <result property="state" column="state"/>
+        <result property="flowerLanguage" column="flowerLanguage"/>
+        <association property="flowerImage" javaType="flowerImage" column="Fid"
+                     select="findFlowerImageByFid"></association>
+    </resultMap>
+    <select id="findFlowerImageByFid" parameterType="java.lang.Integer" resultType="flowerImage">
+        SELECT * FROM flower_image WHERE Fid=#{Fid} ;
+    </select>
+    <update id="updateByFid" >
+        update  flower_detail set FavoriteNumber=FavoriteNumber+#{1} where Fid=#{0};
+    </update>
+    <update id="dropFlower" >
+        update  flower_detail set state='0' where Fid=#{0};
+    </update>
+    <update id="uppFlower" >
+        update  flower_detail set state='1' where Fid=#{0};
+    </update>
+    <select id="flowerDetailListByinfos" parameterType="java.lang.String" resultMap="favoriteDetailAndImageMap">
+        SELECT * FROM flower_detail WHERE  Remark like '%${value}%' || Materials like '%${value}%' || Packaging like '%${value}%' || FlowerLanguage like '%${value}%' and state='1' and number>=0;
+    </select>
+    <select id="findAll" resultMap="favoriteDetailAndImageMap">
+        SELECT * FROM flower_detail where state='1' and number>=0;
+    </select>
+    <select id="findFlowerNumber" resultType="java.lang.Integer" parameterType="java.lang.Integer">
+        SELECT number FROM flower_detail where Fid=#{Fid} and number>=0 ;
+    </select>
+    <select id="findFavoriteTop"  resultMap="favoriteDetailAndImageMap">
+      SELECT * FROM flower_detail where state='1' and number>=0 ORDER BY favoriteNumber DESC LIMIT 4;
+    </select>
+    <select id="dropFlowerDetailListByinfos" parameterType="java.lang.String" resultMap="favoriteDetailAndImageMap">
+        SELECT * FROM flower_detail WHERE  Remark like '%${value}%' || Materials like '%${value}%' || Packaging like '%${value}%' || FlowerLanguage like '%${value}%' and state='0';
+    </select>
+    <select id="findDropAll" resultMap="favoriteDetailAndImageMap">
+        SELECT * FROM flower_detail where state='0' and number>=0;
+    </select>
+</mapper>

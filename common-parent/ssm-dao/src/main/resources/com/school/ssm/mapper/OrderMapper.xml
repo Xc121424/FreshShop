@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.school.ssm.mapper.OrderMapper">
+    <insert id="insert" parameterType="order">
+    insert into orders(ORid,Uuid,Rid,deltime,ORprice,Status) values(#{orid},#{uuid},#{rid},#{deltime},#{orprice},#{status});
+  </insert>
+    <!--  ,#{deltime}-->
+    <select id="findOrderByORId" parameterType="java.lang.String" resultMap="orderMap">
+    select * from orders where ORid=#{orderId}
+  </select>
+    <resultMap id="orderMap" type="order">
+        <id property="orid" column="ORid"/>
+        <result property="uuid" column="Uuid"/>
+        <result property="rid" column="Rid"/>
+        <result property="deltime" column="Deltime"/>
+        <result property="rectime" column="Rectime"/>
+        <result property="orprice" column="Orprice"/>
+        <result property="status" column="Status"/>
+        <association property="receiver" column="rid" javaType="receiver"
+                     select="com.school.ssm.mapper.ReceiverMapper.findById"/>
+        <collection property="orderDetailList" column="orid" javaType="list" ofType="OrderDetail"
+                    select="com.school.ssm.mapper.OrderDetailMapper.findAllByORid"/>
+    </resultMap>
+    <update id="update">
+    update orders set Status=#{1} where ORid=#{0}
+  </update>
+    <update id="OrderOper">
+    update orders set Dele='1' where ORid=#{0}
+  </update>
+    <select id="findAllByUUid" resultMap="orderMap">
+        select * from orders
+        <where>
+            <!--   引用sql通用语句 -->
+            <include refid="Where_username"></include>
+        </where>
+    </select>
+    <sql id="Where_username">
+        <if test="param2=='-1'">
+            uuid=#{0} and Dele='0' order by ORid DESC;
+        </if>
+        <if test="param2!='-1'">
+            uuid=#{0} and Dele='0' and Status=#{1} order by ORid DESC;
+        </if>
+    </sql>
+
+</mapper>

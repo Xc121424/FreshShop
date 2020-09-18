@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/common-parent/common-parent.iml" filepath="$PROJECT_DIR$/common-parent/common-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ssm.iml" filepath="$PROJECT_DIR$/ssm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/common-parent/ssm-api/ssm-api.iml" filepath="$PROJECT_DIR$/common-parent/ssm-api/ssm-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/common-parent/ssm-dao/ssm-dao.iml" filepath="$PROJECT_DIR$/common-parent/ssm-dao/ssm-dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/common-parent/ssm-po/ssm-po.iml" filepath="$PROJECT_DIR$/common-parent/ssm-po/ssm-po.iml" />
+      <module fileurl="file://$PROJECT_DIR$/common-parent/ssm-service/ssm-service.iml" filepath="$PROJECT_DIR$/common-parent/ssm-service/ssm-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/common-parent/ssm-web/ssm-web.iml" filepath="$PROJECT_DIR$/common-parent/ssm-web/ssm-web.iml" />
+    </modules>
+  </component>
+</project>

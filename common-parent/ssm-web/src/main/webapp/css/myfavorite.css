@@ -1,0 +1,175 @@
+.l230 {
+	left: 150px;
+}
+.w970 {
+	 position: relative;
+	 width: 970px;
+ }
+.pull-left {
+	float: left !important;
+}
+.member-r {
+	/*min-height: 675px;*/
+	padding: 0;
+}
+.box-border {
+	border: 1px solid #d9d9d9;
+}
+.attention-wrap .title {
+	padding: 8px 20px;
+	background-color: #f5f5f5;
+}
+.attention-all {
+	font-size: 12px;
+	padding: 20px 30px;
+	border-bottom: 1px solid #d9d9d9;
+	height: 81px;
+}
+.attention-all .all-l {
+	float: left;
+
+}
+.attention-all .all-l .checkbox {
+	display: inline-block;
+	width: 50px;
+	margin-right: 10px;
+}
+.radio, .checkbox {
+	position: relative;
+	display: block;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.radio input[type="radio"], .radio-inline input[type="radio"], .checkbox input[type="checkbox"], .checkbox-inline input[type="checkbox"] {
+	position: absolute;
+	margin-left: -20px;
+	margin-top: 4px \9;
+}
+input[type="radio"], input[type="checkbox"] {
+	margin: 4px 0 0;
+	margin-top: 1px \9;
+	line-height: normal;
+}
+input[type="checkbox"], input[type="radio"] {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 0;
+}
+input, button, select, textarea {
+	font-family: inherit;
+	font-size: inherit;
+	line-height: inherit;
+}
+button, input, optgroup, select, textarea {
+	color: inherit;
+	font: inherit;
+	margin: 0;
+}
+element.style {
+	cursor: pointer;
+}
+.attention-all .all-l a {
+	color: #809903;
+}
+a {
+	color: #737373;
+	text-decoration: none;
+}
+.attention-list {
+	font-size: 12px;
+	margin: 0 30px;
+}
+.attention-list .attention-item:first-child {
+	border-top: 0;
+}
+.attention-list .attention-item {
+	margin: 0;
+	padding: 20px 0;
+	list-style: none;
+	border-top: 2px dotted #d9d9d9;
+	height: 91px;
+}
+ul, ol {
+	margin-top: 0;
+	margin-bottom: 10px;
+}
+.attention-list .attention-item .checkbox {
+	width: 30px;
+	margin-top: 15px;
+	margin-right: 10px;
+}
+.attention-list .attention-item li {
+	float: left;
+}
+
+.attention-list .attention-item .img-box {
+	width: 70px;
+}
+.attention-list .attention-item .img-box img {
+	display: block;
+	width: 50px;
+	height: 50px;
+	border: 1px solid #ccc;
+}
+.attention-list .attention-item .product-title {
+	line-height: 20px;
+	width: 360px;
+	margin-top: 5px;
+}
+.attention-list .attention-item .product-title p {
+	margin: 0;
+}
+.attention-list .attention-item .product-title span {
+	color: #999999;
+}
+.attention-list .attention-item .price {
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 50px;
+	width: 100px;
+	text-align: center;
+	color: #ff6a00;
+}
+.attention-list .attention-item .price .price-sign {
+	margin-right: 1px;
+}
+.price-sign {
+	font-family: arial;
+	margin-right: -4px;
+}
+.price-num {
+	font-family: arial,Verdana,Arial;
+}
+.attention-list .attention-item .operate {
+	float: right;
+	width: 120px;
+	margin-top: 2px;
+	text-align: center;
+	/*height: 46.67px;*/
+}
+.attention-list .attention-item .operate .btn-m {
+	margin-bottom: 6px;
+	color: #585657;
+}
+.attention-list .attention-item .operate a {
+	color: #809903;
+}
+.btn-m {
+	margin-right: 10px;
+	padding: 2px 10px;
+	color: #585657;
+	border: 1px solid #feba8f;
+	border-radius: 2px;
+	width: 102px;
+	/*background: url(../img/modal_header_bg.png) 0 0 repeat-x;*/
+}
+.attention-list .attention-item .operate a {
+	color: #809903;
+}
+a {
+	color: #737373;
+	text-decoration: none;
+}
+a {
+	background-color: transparent;
+}

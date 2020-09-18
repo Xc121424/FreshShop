@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.school.ssm.mapper.ReceiverMapper">
+    <select id="findAll" parameterType="java.lang.Integer" resultType="receiver" >
+        SELECT * FROM receiver where uuid=#{uuid};
+    </select>
+    <update id="update" parameterType="receiver">
+        update receiver set addr=#{addr},rphone=#{rphone},rname=#{rname},provinces=#{provinces},city=#{city},county=#{county},state=#{state} where rid=#{rid};
+    </update>
+    <update id="updateStateByUUid" parameterType="java.lang.Integer">
+        update receiver set state='0' where uuid=#{uuid} and state='1';
+    </update>
+    <insert id="insert" parameterType="receiver">
+        insert into receiver(uuid,addr,rphone,rname,provinces,city,county,state) values(#{uuid},#{addr},#{rphone},#{rname},#{provinces},#{city},#{county},#{state});
+    </insert>
+    <select id="findById" parameterType="java.lang.Integer" resultType="receiver">
+    select * from receiver where rid=#{rid}
+    </select>
+    <delete id="deleteByRid" parameterType="java.lang.Integer" >
+        delete from receiver where rid=#{rid}
+    </delete>
+</mapper>

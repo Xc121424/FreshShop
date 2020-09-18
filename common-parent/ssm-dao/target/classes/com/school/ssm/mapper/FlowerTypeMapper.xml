@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.school.ssm.mapper.FlowerTypeMapper">
+<select id="findAll" resultType="flowerType">
+    select  * from flower_type;
+</select>
+<select id="findAllByTid" parameterType="java.lang.Integer" resultMap="findAllByTidMap">
+    select  * from flower_type where Tid=#{tid};
+</select>
+<resultMap id="findAllByTidMap" type="flowerType">
+        <id property="tid" column="Tid"/>
+        <result property="tname" column="Tname"/>
+        <collection property="flowerDetailTypeList" ofType="flowerDetailType" column="Tid"
+                    select="findFlowerDetailTypeListByTid">
+        </collection>
+
+</resultMap>
+<select id="findFlowerDetailTypeListByTid" parameterType="java.lang.Integer" resultMap="findFlowerDetailTypeListByTidMap">
+    select  * from flower_detail_type where Tid=#{tid};
+</select>
+    <resultMap id="findFlowerDetailTypeListByTidMap" type="flowerDetailType">
+        <id property="fdtid" column="Fdtid"/>
+        <result property="tid" column="tid"/>
+        <result property="fid" column="Fid"/>
+        <association property="flowerDetail" javaType="flowerDetail" column="Fid"
+                    select="com.school.ssm.mapper.FlowerMapper.findFlowerDetailByFid">
+        </association>
+    </resultMap>
+    <select id="findAllByFid" parameterType="java.lang.Integer" resultMap="findFlowerDetailTypeListByTidMap">
+          SELECT * FROM flower_detail_type WHERE fid=#{fid}
+    </select>
+</mapper>

@@ -1,0 +1,267 @@
+.cart-panel {
+    margin: 0;padding: 0 20px;list-style: none; background-color: #ebebeb;height: 40px;
+}
+.containers{
+      width:990px;
+    margin-bottom: 20px;
+    border: 1px solid #d9d9d9;
+    max-width: none !important;
+    padding-right: 0;
+    padding-left: 0;
+    margin-right: auto;
+    margin-left: auto;
+}
+.cart-panel .hd {
+    margin: 0;padding: 0;list-style: none;
+}
+
+.hd li.selecter {
+    width: 36px;
+    height: 40px;
+}
+.hd li {
+    font-family: tahoma, arial, 'Hiragino Sans GB', '\5FAE\8F6F\96C5\9ED1', sans-serif;
+    font-weight: bold;
+    display: inline-block;
+    float: left;
+    padding: 10px 0;
+}
+.order-list .selecter {
+    width: 36px;
+    height: 88px;
+    text-align: left;
+    cursor: pointer;
+}
+
+.hd li.product {
+    width: 432px;
+}
+.hd li.market-price, .hd li.order-price, .hd li.num, .hd li.operate {
+    width: 120px;
+}
+.hd li.market-price, .hd li.order-price {
+    text-align: center;
+}
+.hd li.num {
+
+    text-align: center;
+}
+.hd li.operate {
+    float: right;
+    text-align: center;
+}
+.bd {
+    margin: 0;
+    padding: 0 20px;
+}
+.order-list + .order-list {
+    border-top: 1px solid #D9D9D9;
+}
+.order-list{
+    margin: 0;
+    padding: 15px 0;
+    list-style: none;
+}
+.order-list:first-child {
+    border-top: none;
+}
+
+.order-list .selecter .icon-select {
+    width: 20px;
+    height: 20px;
+    margin-top: 34px;
+}
+.order-list li {
+    line-height: 20px;
+    display: inline-block;
+    float: left;
+}
+.order-list .icon-select {
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-image: url(//img02.hua.com/pc/assets/img/ico_unchecked.png);
+}
+.order-list .icon-select.active {
+    background-image: url(//img02.hua.com/pc/assets/img/ico_checkout.png);
+}
+.order-list li.img-box,order-list .promo-item .img-box {
+    width: 100px;
+}
+ .order-list li.product, .order-list .promo-item .product {
+    width: 332px;
+    padding: 24px 0;
+}
+.order-list li.market-price,.order-list .promo-item .market-price {
+    width: 120px;
+    padding: 0;
+    line-height: 88px;
+}
+.order-list li.market-price {
+    text-decoration: line-through;
+    color: #999999;
+}
+.order-list li.market-price,.order-list li.order-price {
+    text-align: center;
+}
+.order-list li.order-price,.order-list .promo-item .order-price {
+    width: 120px;
+    padding: 0;
+    line-height: 88px;
+    color: #232628;
+    font-weight: normal;
+}
+.order-list li.num, .order-list .promo-item .num {
+    width: 120px;
+    margin: 32px 0;}
+
+.order-list li.num {
+    text-align: center;
+}
+.order-list li.operate, .order-list .promo-item .operate {
+    width: 120px;
+    font-size: 12px;
+    padding: 24px 0 24px 42px;
+}
+.order-list li.operate {
+    float: right;
+}
+.order-list li.product span {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.order-list li.product span {
+    display: block;
+}
+.input-num {
+    width: 80px;
+    margin: 0 auto;
+}
+.input-num .btn.no {
+    cursor: not-allowed;
+}
+.input-num .btn {
+     width: 11px;
+     height: 11px;
+     margin: -2px 0 0;
+     padding: 0;
+}
+.input-num .btn.no i {
+    opacity: 0.2;
+}
+.input-num .btn i {
+    margin-top: 0px;
+}
+.ico-add, .ico-minus {
+    background-image: url(//img02.hua.com/pc/assets/img/common_z.png);
+}
+
+.ico-minus {
+    background-position: -274px -234px;
+}
+.ico {
+    display: inline-block;
+    vertical-align: middle;
+}
+.input-num .form-control {
+    display: inline-block;
+    width: 40px;
+    height: 24px;
+    border-color: #d9d9d9;
+}
+.ico-add {
+    background-position: -396px -239px;
+}
+.ico-minus, .ico-add {
+    width: 9px;
+    height: 9px;
+
+}
+.ico-add {
+    background-repeat: no-repeat;
+}
+.set-bar {
+    margin-bottom: 80px;
+    width:990px;
+    /*border: 1px solid #d9d9d9;*/
+    max-width: none !important;
+    padding-right: 0;
+    padding-left: 0;
+    margin-right: auto;
+    margin-left: auto;
+}
+.set-bar .set-info {
+     font-size: 12px;
+     line-height: 52px;
+     float: left;
+     width: 870px;
+     height: 52px;
+     padding: 0 20px;
+     border: 1px solid #d9d9d9;
+     border-right: 0;
+ }
+.set-bar .set-info .set-stat {
+    float: right;
+}
+.set-bar .set-info .set-stat .price {
+    font-size: 18px;
+    font-weight: bold;
+    display: inline-block;
+    color: #ff6a00;
+}
+.price-sign {
+    font-family: arial;
+    margin-right: -4px;
+}
+.price-num {
+    font-family: arial,Verdana,Arial;
+}
+
+.set-bar .mybtn {
+    font-family: tahoma, arial, 'Hiragino Sans GB', '\5FAE\8F6F\96C5\9ED1', sans-serif;
+    font-weight: bold;
+    float: right;
+    width: 120px;
+    height: 52px;
+}
+.mybtn {
+    border-radius: 0;
+}
+.mybtn-lg, .mybtn-group-lg > .mybtn {
+    padding: 10px 16px;
+    font-size: 18px;
+    line-height: 1.3333333;
+}
+.mybtn-primary {
+    color: #ffffff;
+    background-color: #ff6a00;
+    border-color: #ff6a00;
+}
+.mybtn {
+    display: inline-block;
+    margin-bottom: 0;
+    text-align: center;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    user-select: none;
+}
+button {
+    -webkit-appearance: button;
+
+}
+button {
+    overflow: visible;
+}
+button {
+    font: inherit;
+    margin: 0;
+}
+button, select {
+    text-transform: none;
+}

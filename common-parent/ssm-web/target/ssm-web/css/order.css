@@ -1,0 +1,167 @@
+.l230 {
+    left: 150px;
+}
+.w970 {
+     position: relative;
+     width: 970px;
+ }
+.pull-left {
+    float: left !important;
+}
+.member-r {
+    /*min-height: 675px;*/
+    padding: 0;
+}
+.box-border {
+    padding-top: 20px;
+    border: 1px solid #d9d9d9;
+}
+.member-r:before, .member-r:after {
+    content: " ";
+    display: table;
+}
+.order-wrap .title {
+    margin-bottom: 30px;
+    padding: 8px 20px;
+    background-color: #f5f5f5;
+}
+.order-wrap .title h3 {
+    font-family: tahoma, arial, 'Hiragino Sans GB', '\5FAE\8F6F\96C5\9ED1', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 30px;
+    display: inline-block;
+    margin: 0;
+}
+.box-border .order-panel {
+    font-size: 12px;
+    margin: 0 30px;
+}
+.box-border .order-panel .hd {
+    background-color: #e7e7e7;
+}
+.box-border .order-panel .order-title {
+    line-height: 30px;
+    text-align: center;
+}
+.box-border .order-panel ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.box-border .order-panel ul:before, .box-border .order-panel ul:after {
+    content: " ";
+    display: table;
+}
+.box-border .order-panel .order-title .number {
+    width: 260px;
+}
+.box-border .order-panel ul li {
+    float: left;
+}
+.box-border .order-panel .order-title .consignee {
+    width: 100px;
+}
+.box-border .order-panel .order-title .order-price {
+    width: 100px;
+}
+.box-border .order-panel .order-title .date {
+    width: 190px;
+}
+.box-border .order-panel .order-title .state {
+    width: 150px;
+}
+.box-border .order-panel .order-title .state .form-control {
+    display: block;
+    width: 90px;
+    margin: 0 auto;
+}
+select.input-sm {
+    height: 30px;
+    line-height: 30px;
+}
+.form-control {
+    padding: 6px;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.input-sm {
+    height: 30px;
+    padding: 5px 10px;
+    font-size: 12px;
+    line-height: 1.5;
+    border-radius: 0;
+}
+.box-border .order-panel .order-title .operate {
+    width: 100px;
+}
+.box-border .order-panel ul:after {
+    clear: both;
+}
+.box-border .order-panel .bd {
+     border: 1px solid #f2f2f2;
+ }
+.box-border .order-panel .order-list:first-child {
+    border-top: 0;
+}
+.box-border .order-panel .order-list {
+    padding: 15px 10px;
+    border-top: 1px solid #f2f2f2;
+}
+.box-border .order-panel .order-list .img-box {
+    width: 95px;
+}
+.box-border .order-panel .order-list .number {
+    margin-top: 17px;
+    width: 155px;
+}
+.box-border .order-panel .order-list .consignee {
+    line-height: 50px;
+    width: 100px;
+    text-align: center;
+}
+.box-border .order-panel .order-list .order-price {
+    line-height: 50px;
+    width: 100px;
+    text-align: center;
+}
+.box-border .order-panel .order-list .order-price .price-sign {
+    margin-right: 1px;
+}
+.price-num {
+    font-family: arial,Verdana,Arial;
+}
+.box-border .order-panel .order-list .date {
+    line-height: 25px;
+    width: 190px;
+    text-align: center;
+}
+.box-border .order-panel .order-list .state {
+    font-family: tahoma, arial, 'Hiragino Sans GB', '\5FAE\8F6F\96C5\9ED1', sans-serif;
+    line-height: 50px;
+    width: 150px;
+    text-align: center;
+}
+.box-border .order-panel .order-list .operate {
+    line-height: 24px;
+    width: 90px;
+    text-align: center;
+    color: #809903;
+}
+.box-border .order-panel .order-list .operate a {
+    color: #809903;
+}
+.box-border .order-panel .order-list .operate .btn {
+    display: block;
+    width: 66px;
+    margin: 0 auto 4px;
+    padding: 2px 0;
+    color: #fff;
+    border-radius: 2px;
+}
+div.digg {
+    padding: 3px;
+    margin: 10px 3px 15px;
+    text-align: center;
+}

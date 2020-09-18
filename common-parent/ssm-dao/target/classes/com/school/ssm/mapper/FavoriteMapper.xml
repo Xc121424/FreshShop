@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.school.ssm.mapper.FavoriteMapper">
+    <select id="findAllByUuid" parameterType="int" resultMap="favoriteListResultMap">
+        SELECT * FROM favorities WHERE Uuid=#{uuid} ;
+    </select>
+    <resultMap id="favoriteListResultMap" type="favorities">
+        <id property="favid" column="FAVid"/>
+        <result property="uuid" column="Uuid"/>
+        <result property="fid" column="Fid"/>
+        <association property="flowerDetail" javaType="flowerDetail" column="Fid"
+                     select="com.school.ssm.mapper.FlowerMapper.findFlowerDetailByFid"></association>
+    </resultMap>
+    <insert id="saveFavorite" parameterType="favorities">
+        insert into favorities(Uuid,Fid) values(#{uuid},#{fid})
+    </insert>
+<delete id="deleteByFavorities" parameterType="favorities">
+    delete  from favorities where Fid=#{fid} and Uuid=#{uuid}
+</delete>
+</mapper>

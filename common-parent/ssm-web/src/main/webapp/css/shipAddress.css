@@ -1,0 +1,173 @@
+
+.right-layout {
+    width: 990px;
+    padding: 1px 0 0;
+    margin-left: 150px;
+}
+html, body, div, ul, ol, li, dl, dt, dd, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, fieldset, input {
+    padding: 0;
+    margin: 0;
+}
+.right-layout .wrap {
+    width: 980px;
+
+}
+.ncm-default-table {
+    line-height: 20px;
+    width: 100%;
+    border-collapse: collapse;
+    clear: both;
+}
+.ncm-default-table thead th {
+    color: black;
+    background-color: #5bc0de;
+    text-align: center;
+    height: 20px;
+    padding: 8px 0;
+    border-bottom: solid 1px #E7E7E7;
+}
+.w80 {
+    width: 80px !important;
+}
+.w150 {
+    width: 150px !important;
+}
+.tl {
+    width: 360px !important;
+    text-align: center;
+
+}
+.w120 {
+    width: 160px !important;
+}
+.w110 {
+    width: 110px !important;
+}
+.ncm-default-table tbody tr.bd-line td {
+    border-bottom: solid 1px #E7E7E7;
+}
+.ncm-default-table tbody td {
+    color: #999;
+    background-color: #FFF;
+    text-align: center;
+    padding: 10px 0;
+}
+.ncm-table-handle {
+    font-size: 0;
+    *word-spacing: -1px;
+}
+.ncm-table-handle span:first-child {
+    border-left: none 0;
+}
+.ncm-table-handle span {
+    vertical-align: middle;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-align: center;
+    display: inline-block;
+    padding: 0 4px;
+    border-left: solid 1px #E6E6E6;
+}
+.ncm-table-handle span a {
+    color: #777;
+    background-color: #FFF;
+    display: block;
+    padding: 3px 7px;
+    margin: 1px;
+}
+a:link, a:visited, a:active {
+    text-decoration: none;
+}
+.ncm-table-handle span a i {
+     font-size: 14px;
+     line-height: 16px;
+     height: 16px;
+     display: block;
+     clear: both;
+     margin: 0;
+     padding: 0;
+ }
+.ncm-table-handle span a p {
+    font: 12px/16px arial;
+    height: 16px;
+    display: block;
+    clear: both;
+    margin: 0;
+    padding: 0;
+}
+.tabmenu {
+    background-color: #FFF;
+    width: 100%;
+    height: 38px;
+    display: block;
+    position: relative;
+    z-index: 1;
+}
+.tabmenu .tab {
+    font-size: 0;
+    /**word-spacing: -1px;*/
+    background-color: #FFF;
+    height: 36px;
+    border-bottom: solid 1px #E7E7E7;
+}
+.tabmenu .tab li {
+    vertical-align: top;
+    letter-spacing: normal;
+    word-spacing: normal;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    margin-right: -1px;
+}
+.tabmenu .tab .active a, .tabmenu .tab .active a:hover {
+    font-size: 14px;
+    font-weight: 600;
+    color: #E60012;
+    background-color: #FFF;
+    padding: 7px 19px 9px 19px;
+    cursor: default;
+}
+.tabmenu .tab li a {
+    font-family: "microsoft yahei";
+    font-size: 12px;
+    line-height: 20px;
+    /*color: #666;*/
+    background-color: #F7F7F7;
+    display: block;
+    height: 37px;
+    padding: 7px 19px 8px 19px;
+    border-style: solid;
+    border-color: #E7E7E7;
+    border-width: 1px 1px 0 1px;
+}
+.tabmenu a.ncm-btn {
+    padding: 5px 13px;
+    position: absolute;
+    z-index: 1;
+    top: -2px;
+    right: 0px;
+}
+a.ncm-btn-orange, .ncm-table-handle a:hover.btn-orange, .ncm-table-handle a.btn-orange-current {
+    background-color: #FAA732;
+    margin: 0;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #E1962D #E1962D #BB7D25 #E1962D !important;
+}
+a.ncm-btn-blue, a.ncm-btn-acidblue, a.ncm-btn-green, a.ncm-btn-orange, a.ncm-btn-red, a.ncm-btn-black, a:hover.ncm-btn-blue, a:hover.ncm-btn-acidblue, a:hover.ncm-btn-green, a:hover.ncm-btn-orange, a:hover.ncm-btn-red, a:hover.ncm-btn-black, .ncm-table-handle a.btn-orange-current {
+    color: #FFF !important;
+    text-shadow: 0 -1px 0 rgba(0,0,0,0.10);
+}
+a.ncm-btn {
+    /*font: normal 12px/20px "microsoft yahei";*/
+    /*color: #777!important;*/
+    /*background-color: #F5F5F5;*/
+    text-align: center;
+    vertical-align: middle;
+    display: inline-block;
+    height: 32px;
+    /*padding: 4px 12px;*/
+    border: solid 1px;
+    /*border-color: #DCDCDC #DCDCDC #B3B3B3 #DCDCDC;*/
+    cursor: pointer;
+}

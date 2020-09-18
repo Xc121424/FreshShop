@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.school.ssm.mapper.UserMapper">
+    <select id="findUser" resultType="user" parameterType="java.lang.String">
+     select * from user where Account=#{account} union  select * from user where tel=#{account}
+    </select>
+    <select id="findEmail" resultType="user" parameterType="java.lang.String">
+     select * from user where Email=#{email}
+    </select>
+    <select id="findManager" resultType="user" parameterType="java.lang.String">
+   select * from user where Account=#{account} and grants="1" union  select * from user where tel=#{account} and grants="1"
+    </select>
+    <insert id="save" parameterType="user" >
+        insert into user(username,password,tel,email,account,sex,grants) values(#{username},#{password},#{tel},#{email},#{account},#{sex},0);
+    </insert>
+    <update id="update" parameterType="user" >
+        update user set email=#{email},tel=#{tel},sex=#{sex},username=#{username},password=#{password} where account=#{account}
+    </update>
+
+
+</mapper>

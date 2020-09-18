@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.school.ssm.mapper.ShopMapper">
+    <select id="findById"  resultType="shop" >
+        SELECT * FROM shop WHERE Uuid=#{0} and Fid=#{1};
+    </select>
+
+    <insert id="insert" parameterType="shop">
+        insert into shop(Uuid,Fid,NUMBER) values(#{uuid},#{fid},#{number})
+    </insert>
+<delete id="deleteByT" parameterType="shop">
+    delete  from shop where Fid=#{fid} and Uuid=#{uuid};
+</delete>
+    <update id="update" parameterType="shop" >
+        update shop set NUMBER =#{number} where Uuid=#{uuid} and Fid=#{fid}
+    </update>
+    <select id="findAllByUUid" parameterType="int" resultMap="shopMap" >
+        select  * from shop where Uuid=#{uuid};
+    </select>
+    <resultMap id="shopMap" type="shop">
+        <id property="sid" column="Sid"/>
+        <result property="uuid" column="Uuid"/>
+        <result property="number" column="Number"/>
+        <result property="fid" column="Fid"/>
+        <association property="flowerDetail"   column="Fid" javaType="flowerDetail"
+                     select="com.school.ssm.mapper.FlowerMapper.findFlowerDetailByFid"/>
+    </resultMap>
+    <select id="findShopTop"  resultMap="shopMap" >
+       SELECT s.*,SUM(1) AS numSum FROM shop s,flower_detail f where s.fid=f.fid and f.state='1' GROUP BY s.fid ORDER BY numSum DESC LIMIT 4;
+    </select>
+
+</mapper>

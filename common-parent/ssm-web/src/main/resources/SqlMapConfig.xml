@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+
+    <!--    先加载properties内部数据，然后加载resource数据并覆盖已加载数据，最后加载resultType数据并覆盖已加载数据；-->
+    <!--    建议不在properties内部加数据；resource中定义的属性名要有特殊性；-->
+    <properties resource="SQL.properties">
+        <!--        <property name="jdbc.url" value=""/>-->
+    </properties>
+<!--    配置延迟加载-->
+    <settings>
+<!--        打开延迟加载的开关-->
+        <setting name="lazyLoadingEnabled" value="true"/>
+<!--        将积极加载转成消极加载-->
+        <setting name="aggressiveLazyLoading" value="false"/>
+    </settings>
+    <!--    定义参数类型别名-->
+    <typeAliases>
+        <!--        单个类型定义别名-->
+        <!--    <typeAlias type="cn.itcast.mybatis.po.User" alias="user"></typeAlias>-->
+        <!--        批量定义别名，类型为定义包下类（类名首字母大小写均可）-->
+        <package name="cn.itcast.mybatis.po"/>
+    </typeAliases>
+    <environments default="mysql">
+        <environment id="mysql">
+            <transactionManager type="JDBC"></transactionManager>
+            <dataSource type="POOLED">
+                <property name="driver" value="${jdbc.driver}"/>
+                <property name="url" value="${jdbc.url}"/>
+                <property name="username" value="${jdbc.username}"/>
+                <property name="password" value="${jdbc.password}"/>
+            </dataSource>
+        </environment>
+    </environments>
+    <mappers>
+        <!--        <mapper resource="sqlmap/User.xml"/>-->
+        <!--        <mapper resource="cn/itcast/mybatis/mapper/IUserMapper.xml"/>-->
+        <!--        <mapper class="cn.itcast.mybatis.mapper.IUserMapper"/>-->
+        <package name="cn.itcast.mybatis.mapper"/>
+
+    </mappers>
+</configuration>

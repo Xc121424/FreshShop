@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.school.ssm.mapper.OrderDetailMapper" >
+  <insert id="insert" parameterType="orderDetail" >
+    insert into order_detail(orid,famount,fid) values(#{orid},#{famount},#{fid});
+  </insert>
+  <select id="findAllByORid" parameterType="java.lang.String" resultMap="orderDetailMap">
+    select * from order_detail where orid=#{orid}
+  </select>
+  <resultMap id="orderDetailMap" type="orderDetail">
+    <id property="itemid" column="itemid"/>
+    <result property="orid" column="orid"/>
+    <result property="famount" column="famount"/>
+    <result property="fid" column="fid"/>
+    <association property="flowerDetail" column="fid" javaType="flowerDetail"
+                 select="com.school.ssm.mapper.FlowerMapper.findFlowerDetailByFid"/>
+
+  </resultMap>
+  <select id="findBuyTop"  resultMap="orderDetailMap" >
+       SELECT s.*,SUM(1) AS numSum FROM order_detail s,flower_detail f where s.fid=f.fid and f.state='1' GROUP BY s.fid ORDER BY numSum DESC LIMIT 4;
+    </select>
+
+</mapper>
